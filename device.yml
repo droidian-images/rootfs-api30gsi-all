@@ -1,17 +1,17 @@
 {{- $architecture := or .architecture "arm64" -}}
 {{- $suffix := or .suffix "testbuild" -}}
-{{- $image := or .image (printf "droidian-rootfs-api29gsi-%s%s.zip" $architecture $suffix) -}}
+{{- $image := or .image (printf "droidian-rootfs-api30gsi-%s%s.zip" $architecture $suffix) -}}
 {{- $output_type := "tarball" -}}
 
 architecture: {{ $architecture }}
 actions:
 
   - action: recipe
-    description: Generate api29gsi phone rootfs
+    description: Generate api30gsi phone rootfs
     recipe: rootfs-templates/gsi_full_phone.yaml
     variables:
       architecture: {{ $architecture }}
-      apilevel: 29
+      apilevel: 30
 
   - action: recipe
     description: Get devtools sideload's zip

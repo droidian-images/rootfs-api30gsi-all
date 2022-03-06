@@ -104,8 +104,8 @@ jobs:
           GITHUB_TOKEN: ${{ secrets.GITHUB_TOKEN }}
         with:
           upload_url: ${{ needs.once.outputs.upload_url }}
-          asset_path: ./droidian-rootfs-api29gsi-${{ matrix.debos_arch }}${{ env.release_suffix }}.zip
-          asset_name: droidian-rootfs-api29gsi-${{ matrix.debos_arch }}${{ env.release_suffix }}.zip
+          asset_path: ./droidian-rootfs-api30gsi-${{ matrix.debos_arch }}${{ env.release_suffix }}.zip
+          asset_name: droidian-rootfs-api30gsi-${{ matrix.debos_arch }}${{ env.release_suffix }}.zip
           asset_content_type: application/gzip
 
       - name: Upload devtools sideload
